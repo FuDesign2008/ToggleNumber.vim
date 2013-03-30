@@ -19,10 +19,11 @@ set cpo&vim
 
 
 function! ToggleNumber()
-    if (&relativenumber == 1)
-        set number
+    "You may has multi-windows, so it should only working on local buffer
+    if (&l:relativenumber == 1)
+        setlocal number
     else
-        set relativenumber
+        setlocal relativenumber
     endif
 endfunction
 
