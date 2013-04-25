@@ -1,7 +1,7 @@
 
 "
-" toogleNumber.vim
-" toogle number and relativenumber options
+" toggleNumber.vim
+" toggle number and relativenumber options
 "
 "Shortcut:<leader>n
 "Author: FuDesign2008@163.com
@@ -10,10 +10,10 @@
 
 
 
-if &cp || exists("g:toogle_number")
+if &cp || exists("g:toggle_number")
     finish
 endif
-let g:toogle_number = 1
+let g:toggle_number = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
@@ -30,7 +30,7 @@ endfunction
 
 command! TNumber call s:ToggleNumber()
 
-if !exists('g:toogle_number_custom_keymap')
+if !exists('g:toggle_number_custom_keymap')
     nnoremap <LEADER>n :TNumber<CR>
 endif
 
