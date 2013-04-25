@@ -18,7 +18,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
-function! ToggleNumber()
+function! s:ToggleNumber()
     "You may has multi-windows, so it should only working on local buffer
     if (&l:relativenumber == 1)
         setlocal number
@@ -27,7 +27,13 @@ function! ToggleNumber()
     endif
 endfunction
 
-nnoremap <LEADER>n :call ToggleNumber()<CR>
+
+command! TNumber call s:ToggleNumber()
+
+if !exists('g:toogle_number_custom_keymap')
+    nnoremap <LEADER>n :TNumber<CR>
+endif
+
 
 
 let &cpo = s:save_cpo
