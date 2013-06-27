@@ -18,7 +18,7 @@ If you do NOT want use the default key mappings, set
 `:TNumber` commmond in the `.vimrc` file. For example, mapping `<leader>t`:
 
 ```vim
-    let g:toggle_number_custom_keymap = 1
-    nnoremap <LEADER>t :TNumber<CR>
+let g:toggle_number_custom_keymap = 1
+nnoremap <LEADER>t :TNumber<CR>
 ```
 
