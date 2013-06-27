@@ -14,4 +14,11 @@ Its default key mapping is `<leader>n`.
 1. `g:toggle_number_custom_keymap`
 
 If you do NOT want use the default key mappings, set
-`g:toggle_number_custom_keymap` to `1` in the `.vimrc` file.
+`g:toggle_number_custom_keymap` to `1` and set your favorite keys for
+`:TNumber` commmond in the `.vimrc` file. For example, mapping `<leader>t`:
+
+```vim
+    let g:toggle_number_custom_keymap = 1
+    nnoremap <LEADER>t :TNumber<CR>
+```
+
