@@ -39,10 +39,20 @@ function! s:ToggleNumber()
         setlocal number
         let b:number_status = 2
     elseif b:number_status == 2
+        "set local number to make sure relative number like this (vim 7.4)
+        "
+        "   2
+        "   1
+        " 16  <- show current line number
+        "   1
+        "   2
+        "
+        setlocal number
         setlocal relativenumber
         let b:number_status = 4
     elseif b:number_status == 4
         setlocal norelativenumber
+        setlocal nonumber
         let b:number_status = 1
     endif
 endfunction
