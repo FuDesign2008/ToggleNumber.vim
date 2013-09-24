@@ -21,8 +21,8 @@ set cpo&vim
 function! s:ToggleNumber()
     " number status
     " 1 -> nonumber
-    " 2 -> number
     " 4 -> relative number
+    " 2 -> number
     "
     if !exists('b:number_status')
         "You may has multi-windows, so it should only working on local buffer
@@ -36,9 +36,6 @@ function! s:ToggleNumber()
     endif
     "
     if b:number_status == 1
-        setlocal number
-        let b:number_status = 2
-    elseif b:number_status == 2
         "set local number to make sure relative number like this (vim 7.4)
         "
         "   2
@@ -51,6 +48,10 @@ function! s:ToggleNumber()
         setlocal relativenumber
         let b:number_status = 4
     elseif b:number_status == 4
+        setlocal norelativenumber
+        setlocal number
+        let b:number_status = 2
+    elseif b:number_status == 2
         setlocal norelativenumber
         setlocal nonumber
         let b:number_status = 1
