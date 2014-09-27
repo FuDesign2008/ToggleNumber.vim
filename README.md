@@ -8,7 +8,7 @@ Toggle the `nonumber`, `number` and `relativenumber` status in vim.
 The plugin support  `:TNumber` command to toggle the `nonumber`, `number` and
 `relativenumber` status.
 
-Its default key mapping is `<leader>n`.
+Its default key mapping is `<leader>nn`.
 
 ##Options
 1. `g:toggle_number_custom_keymap`

@@ -62,7 +62,7 @@ endfunction
 command! TNumber call s:ToggleNumber()
 
 if !exists('g:toggle_number_custom_keymap')
-    nnoremap <LEADER>n :TNumber<CR>
+    nnoremap <LEADER>nn :TNumber<CR>
 endif
 
 
