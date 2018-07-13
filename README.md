@@ -1,17 +1,17 @@
-ToggleNumber.vim
-================
+# ToggleNumber.vim
 
 Toggle the `nonumber`, `number` and `relativenumber` status in vim.
 
-##Usage
+## Usage
 
-The plugin support  `:ToggleNumber` command to toggle the `nonumber`, `number` and
+The plugin support `:ToggleNumber` command to toggle the `nonumber`, `number` and
 `relativenumber` status.
 
 Its default key mapping is `<leader>nn`.
 
-##Options
-1. `g:toggle_number_custom_keymap`
+## Options
+
+1.  `g:toggle_number_custom_keymap`
 
 If you do NOT want use the default key mappings, set
 `g:toggle_number_custom_keymap` to `1` and set your favorite keys for
@@ -21,4 +21,3 @@ If you do NOT want use the default key mappings, set
 let g:toggle_number_custom_keymap = 1
 nnoremap <LEADER>t :ToggleNumber<CR>
 ```
-
