@@ -1,5 +1,7 @@
 # ToggleNumber.vim
 
+⚠️ Deprecated, prefer https://github.com/myusuf3/numbers.vim
+
 Toggle the `nonumber`, `number` and `relativenumber` status in vim.
 
 ## Usage
